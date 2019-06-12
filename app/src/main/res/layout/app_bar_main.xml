@@ -31,7 +31,7 @@
             android:shadowColor="@color/white_d_d"
             android:shadowRadius="8.0"
             android:gravity="center"
-            android:text="健康"
+            android:text="健康知识"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentTop="true"
