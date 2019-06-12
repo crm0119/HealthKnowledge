@@ -8,6 +8,7 @@
         android:id="@+id/left_bk_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         />
     <ListView
         android:dividerHeight="-1dp"
