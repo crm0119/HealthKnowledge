@@ -1,5 +1,6 @@
 package cn.edu.gdpt.healthknowledge;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -54,6 +55,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                     Toast.makeText(RegisterActivity.this,"注册成功",
                             Toast.LENGTH_SHORT).show();
                     RegisterActivity.this.finish();
+                    LoginActivity.userName = userName;
+                    LoginActivity.psw = psw;
+                    startActivityForResult(new Intent(RegisterActivity.this,LoginActivity.class),11444);
                 }else {
                     Toast.makeText(RegisterActivity.this,"注册失败",
                             Toast.LENGTH_SHORT).show();

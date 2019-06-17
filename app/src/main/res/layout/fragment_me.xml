@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     tools:context=".MeFragment"
     android:background="@android:color/white">
     <android.support.design.widget.AppBarLayout
@@ -15,7 +16,7 @@
         <android.support.design.widget.CollapsingToolbarLayout
             android:id="@+id/collapsing_tool_bar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:fitsSystemWindows="true"
             app:contentScrim="?attr/colorPrimary"
             app:expandedTitleGravity="bottom|center_horizontal"
@@ -34,7 +35,14 @@
                 app:layout_collapseMode="pin"
                 app:navigationIcon="@android:color/transparent"
                 app:theme="@style/ThemeOverlay.AppCompat.Dark"></android.support.v7.widget.Toolbar>
-
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="70dp"
+                android:layout_gravity="center"
+                android:layout_height="70dp"
+                android:src="@drawable/default_head"
+                app:layout_anchor="@id/collapsing_tool_bar"
+                app:layout_anchorGravity="center" />
         </android.support.design.widget.CollapsingToolbarLayout>
         <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -45,12 +53,6 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/iv_avatar"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:src="@drawable/default_head"
-        app:layout_anchor="@id/collapsing_tool_bar"
-        app:layout_anchorGravity="center" />
 
-</FrameLayout>
+
+</android.support.design.widget.CoordinatorLayout>

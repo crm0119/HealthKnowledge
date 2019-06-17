@@ -1,6 +1,7 @@
 package cn.edu.gdpt.healthknowledge;
 
 import android.content.Intent;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -12,11 +13,23 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
-    private EditText et_psw,et_user_name;
+    private  EditText et_psw;
+     EditText et_user_name;
     private ImageView iv_show_psw;
     private TextView tv_quick_register,tv_forget_psw;
     private Button btn_login;
     private DBUtils dbUtils;
+    public static  String userName = "";
+public  static  String psw = "";
+
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        et_user_name.setText(userName);
+        et_psw.setText(psw);
+        super.onActivityResult(requestCode, resultCode, data);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
