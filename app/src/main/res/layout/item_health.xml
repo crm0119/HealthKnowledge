@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:id="@+id/itemhealth">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/item_tv_title"
+        android:text="冬至吃萝卜赛过小人参"
+        android:textColor="#298185"
+        android:textSize="30dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#61B8FF"
+        android:lines="5"
+        android:id="@+id/item_tv_content"
+        android:text="萝卜中含有蛋白质、糖、维生素A、维生素C、尼克酸，以及无素钙、磷、铁等。萝卜内含有的糖化酵素和芥子油成分，对人体消化功能大有裨益。原因是糖化酵素能分解食物中的淀粉、脂肪等成分，使之为人体反充分吸收和利用；芥子油具有辛淀粉、脂肪等成分，使之为人体所充公吸收和利用；芥子油具有辛辣味，能促进胃肠蠕动、增强食欲、帮助消化，萝卜的这种功能使它赢得了“小人参”的美称。 　　萝卜除了是人们喜欢食用的大众化蔬菜外，其药用丛价值更令人刮目相看。 　　萝卜味甘辛、性凉，有下气定喘、止咳化痰消食除胀、利大小便和清热解毒的功效。患有急慢性气管炎或咳嗽痰多气喘者，用白萝卜洗净切片或丝，加饴糖腌后食用，有降气化痰平喘的作用。呕吐时，可将萝卜捣碎，加密水煎煮，细细咽嚼，有和胃、止吐、消食作用。 　　萝卜还有较好的抗癌作用。这是因为萝卜内含有纤维木质素，能提高巨噬细菌、异物以及坏死细胞的功能，从而加强人体抗癌的能力。这种抗癌作用以生食萝卜为最好。另外，萝卜含有的糖化酵素还能分解致癌物亚硝胺，起防癌作用。生萝卜汁有缓慢的降压作用。生萝卜汁加蜂蜜可作为高血压和动脉硬化患者很好的辅助食疗品。 　　饮食调养要遵循“秋冬养阴”“无扰乎阳”“虚者补之，寒者温之”的古训，随四时气候的变化而调节饮食。元代忽思慧所著《饮膳正要》曰：“……冬气寒，宜食黍以热性治其寒。！” qq3149886 　　也就是说，少食生冷，但也不宜躁热，有的放矢地食用一些滋阴潜阳，热量较高的膳食为宜，同时也要多吃新鲜蔬菜以避免维生素的缺乏，如：牛羊肉、乌鸡、鲫鱼，多饮豆浆、牛奶，多吃萝卜、青菜、豆腐、木耳等。 　　这里须要注意的是，我国幅员辽阔，地理环境各异，人们的生活方式不同，同属冬令，西北地区于东南沿海的气候条件迥然有别；冬季的西北地区天气寒冷，进补宜大温大热之品，如牛、羊、狗肉等；而长江以南地区虽已入冬，但气温较西北地区要温和的多，进补应以清补甘温之味，如鸡、鸭、鱼类；地处高原山区，雨量较少且气候偏燥的地带，则应以甘润生津之品的果蔬、冰糖为宜。除此之外，还要因人而异，因为食有谷肉果菜之分，人有男女老幼之别，体（体质）有虚实寒热之辩，本着人体生长规律，中医养生原则，少年重养，中年重调，老年重保，耋耄重延。故“冬令进补”应根据实际情况有针对性地选择清补、温补、小补、大补，万不可盲目“进补"
+        android:textSize="20dp"/>
+
+</LinearLayout>

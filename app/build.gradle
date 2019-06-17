@@ -30,16 +30,11 @@ dependencies {
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    implementation 'com.squareup.okhttp:okhttp:2.7.5'
     implementation 'com.android.support:design:28.0.0'
     testImplementation 'junit:junit:4.12'
-    /*implementation files('libs/okhttp-2.7.5.jar')
-    implementation files('libs/okio-1.11.0.jar')
-    implementation files('libs/gson-2.2.4.jar')
-    implementation files('libs/gson-2.2.4-javadoc.jar')
-    implementation files('libs/gson-2.2.4-sources.jar')
-    implementation files('libs/butterknife-5.1.2.jar')
-    implementation files('libs/rxjava-1.1.0.jar')
-    implementation files('libs/glide-3.6.1.jar')*/
-    //implementation files('libs/android-support-v7-palette.jar')
     implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.google.code.gson:gson:2.2.4'
+    implementation 'com.nightonke:boommenu:2.1.1'
 }
