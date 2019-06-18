@@ -3,13 +3,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/mebj"
     tools:context=".NewsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <include layout="@layout/content_scrolling"
+        />
+
+    <RelativeLayout
+        android:id="@+id/health_bottom_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="70dp"
+        android:layout_gravity="bottom">
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/health_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:paddingBottom="20dp"
+            app:elevation="5dp"
+            app:pressedTranslationZ="10dp"
+            app:srcCompat="@drawable/health_bottom_up" />
+
+    </RelativeLayout>
 
 </FrameLayout>
