@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/mebj"
     tools:context=".HomeFragment">
 
     <LinearLayout
@@ -28,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/health_recycler_view"
-            android:background="@drawable/contextbj">
+            >
 
         </android.support.v7.widget.RecyclerView>
 
