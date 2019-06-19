@@ -20,6 +20,8 @@ public class HealthRVadapter extends RecyclerView.Adapter<HealthRVadapter.viewho
     }
 
     private List<HomeBean.ResultBean.ListBean> listBeans;
+
+
     @NonNull
     @Override
     public HealthRVadapter.viewholder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {

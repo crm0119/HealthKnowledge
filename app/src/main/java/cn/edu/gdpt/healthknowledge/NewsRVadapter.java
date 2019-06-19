@@ -34,10 +34,12 @@ public class NewsRVadapter extends RecyclerView.Adapter {
     Context context;
     RecyclerView recyclerView;
 
-    public NewsRVadapter(Context context, RecyclerView recyclerView) {
+    public NewsRVadapter(Context context, List<HomeBean.ResultBean.ListBean> DataBean) {
         this.context = context;
         this.recyclerView = recyclerView;
+        this.DataBean= DataBean;
     }
+    private List<HomeBean.ResultBean.ListBean>DataBean;
 
     public void setLoaded() {
         isLoading = false;

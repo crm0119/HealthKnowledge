@@ -4,6 +4,7 @@ package cn.edu.gdpt.healthknowledge;
 import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.app.Activity;
 import android.app.Dialog;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -49,6 +50,7 @@ import java.util.List;
 public class NewsFragment extends Fragment {
 
 
+    private List<Bean.ResultBean.DataBean> DataBean;
     private RecyclerView recyclerView;
     private ProgressBar progressBar;
     private FrameLayout frameLayout;
@@ -59,6 +61,7 @@ public class NewsFragment extends Fragment {
     private String currentCategory;
     private View FailView;
     private View view;
+    private Activity activity;
 
 
     public NewsFragment() {
@@ -71,8 +74,11 @@ public class NewsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         // return inflater.inflate(R.layout.fragment_news, container, false);
+        activity = getActivity();
         View view = inflater.inflate(R.layout.fragment_news, container, false);
 
+
+        
         initRecyclerView();
         initView(view);
 
