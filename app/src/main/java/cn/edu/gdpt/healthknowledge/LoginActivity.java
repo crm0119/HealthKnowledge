@@ -13,23 +13,22 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
-    private  EditText et_psw;
-     EditText et_user_name;
+    private  EditText et_psw,et_user_name;
     private ImageView iv_show_psw;
     private TextView tv_quick_register,tv_forget_psw;
     private Button btn_login;
     private DBUtils dbUtils;
-    public static  String userName = "";
-public  static  String psw = "";
+    //public static  String userName = "";
+//public  static  String psw = "";
 
 
 
-    @Override
+   /* @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        et_user_name.setText(userName);
-        et_psw.setText(psw);
+        //et_user_name.setText(userName);
+        //et_psw.setText(psw);
         super.onActivityResult(requestCode, resultCode, data);
-    }
+    }*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
