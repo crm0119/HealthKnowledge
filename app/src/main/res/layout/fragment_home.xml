@@ -20,7 +20,8 @@
             android:id="@+id/edt"
             android:layout_width="match_parent"
             android:layout_height="69dp"
-            android:background="@drawable/edtbj" />
+            android:background="@drawable/edtbj"
+            android:hint="请输入您要查询的健康知识" />
         <TextView
             android:alpha="0.3"
             android:layout_width="match_parent"
