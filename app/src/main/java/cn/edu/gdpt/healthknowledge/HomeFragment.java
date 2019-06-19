@@ -3,6 +3,7 @@ package cn.edu.gdpt.healthknowledge;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -19,6 +20,8 @@ import com.google.gson.Gson;
 import java.io.IOException;
 import java.util.List;
 
+import github.ishaan.buttonprogressbar.ButtonProgressBar;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -28,6 +31,7 @@ public class HomeFragment extends Fragment {
     private ViewGroup viewGroup;
     private EditText edt;
     private Button btn;
+
     private RecyclerView recyclerView;
     private List<HomeBean.ResultBean.ListBean> listBeans;
     private Gson gson=new Gson();
@@ -57,6 +61,43 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 //Toast.makeText(activity, "button", Toast.LENGTH_SHORT).show();
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            final String sync_get = HttpUtils.Sync_Get(edt.getText().toString().trim());
+                            HomeBean bean=gson.fromJson(sync_get,HomeBean.class);
+                            listBeans=bean.getResult().getList();
+                            activity.runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    // Toast.makeText(activity, sync_get, Toast.LENGTH_SHORT).show();
+                                    HealthRVadapter healthRVadapter=new HealthRVadapter(getActivity(),listBeans);
+                                    LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getActivity());
+                                    linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+                                    recyclerView.setLayoutManager(linearLayoutManager);
+                                    recyclerView.setAdapter(healthRVadapter);
+
+                                }
+                            });
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }).start();
+            }
+        });
+        final ButtonProgressBar bar = (ButtonProgressBar)viewGroup.findViewById(R.id.btn);
+        bar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bar.startLoader();
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        bar.stopLoader();
+                    }
+                }, 2000);
                 new Thread(new Runnable() {
                     @Override
                     public void run() {

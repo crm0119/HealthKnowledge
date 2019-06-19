@@ -42,5 +42,6 @@ dependencies {
     implementation 'com.youth.banner:banner:1.4.10'
 
     implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.github.ishaan1995:ButtonProgressBar:1.0'
 
 }

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/mebj"
     tools:context=".HomeFragment">
 
@@ -28,14 +29,13 @@
             android:layout_height="5dp"
             android:background="@drawable/line_white_d_d" />
 
-        <Button
-            android:id="@+id/btn"
+        <github.ishaan.buttonprogressbar.ButtonProgressBar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#03A9F4"
-            android:text="搜索健康知识"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
+            android:id="@+id/btn"
+            app:text="搜索健康知识"
+            app:textColor="@android:color/white"
+            app:type="indeterminate"/>
         <TextView
             android:alpha="0.3"
             android:layout_width="match_parent"
