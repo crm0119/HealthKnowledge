@@ -16,13 +16,22 @@
             android:layout_width="match_parent"
             android:layout_height="5dp"
             android:background="@drawable/line_white_d_d" />
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="1dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true">
+
 
         <EditText
             android:id="@+id/edt"
             android:layout_width="match_parent"
             android:layout_height="69dp"
-            android:background="@drawable/edtbj"
             android:hint="请输入您要查询的健康知识" />
+        </android.support.v7.widget.CardView>
         <TextView
             android:alpha="0.3"
             android:layout_width="match_parent"

@@ -30,6 +30,7 @@ public class HomeFragment extends Fragment {
     private Activity activity;
     private ViewGroup viewGroup;
     private EditText edt;
+    private TextView jumpTextView;
     private Button btn;
 
     private RecyclerView recyclerView;
@@ -37,6 +38,8 @@ public class HomeFragment extends Fragment {
     private Gson gson=new Gson();
     private TextView item_tv_content;
     private Layout itemlist;
+
+    private JumpingBeans jumpingBeans;
 
 
 
@@ -55,6 +58,14 @@ public class HomeFragment extends Fragment {
 
 
         initView(viewGroup);
+
+        //jumpTextView = (TextView) viewGroup.findViewById(R.id.tv_jump);
+       // jumpingBeans = JumpingBeans
+         //       .with(jumpTextView)
+         //       .makeTextJump(0, jumpTextView.getText().toString().indexOf(' '))
+         //       .setIsWave(true)
+          //      .setLoopDuration(800) // ms
+           //     .build();
 
 
         viewGroup.findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
@@ -132,8 +143,7 @@ public class HomeFragment extends Fragment {
         edt = (EditText) viewGroup.findViewById(R.id.edt);
         recyclerView=(RecyclerView) viewGroup.findViewById(R.id.health_recycler_view);
         item_tv_content=(TextView)viewGroup.findViewById(R.id.item_tv_content);
-
-
+        //jumpTextView=(TextView)viewGroup.findViewById(R.id.tv_jump);
     }
 
 
